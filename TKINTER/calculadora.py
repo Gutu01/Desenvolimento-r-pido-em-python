@@ -22,9 +22,6 @@ def calcular():
 def limpar():
     entrada.delete(0, tk.END)
 
-
-
-
 botoes = [
     ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
     ('4', 2, 0), ('5', 2, 1), ('9', 2, 2), ('*', 2, 3),
@@ -39,15 +36,5 @@ for(texto, linha, coluna) in botoes:
         tk.Button(janela, text = texto, width=5, command=limpar).grid(row=linha, column = coluna)
     else:
         tk.Button(janela, text = texto, width=5, command=lambda t=texto:clicar(t)).grid(row=linha, column = coluna)
-
-
-
-
-
-
-
-
-
-
 
 janela.mainloop()
